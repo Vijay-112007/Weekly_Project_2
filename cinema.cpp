@@ -28,50 +28,61 @@ int main(){
     switch (choice)
     {
         case 1:
-        displayOptions(arr[10][10]);
-        cout << "1. View Seat Layout \n2. Book Single Seat\n3. Book Multiple Seats\n4. Display Available Seats\n5. Exit\nEnter Your Choice:" << " ";
-        cin >> choice;
-        break;
+        {
+            displayOptions(arr[10][10]);
+            cout << "1. View Seat Layout \n2. Book Single Seat\n3. Book Multiple Seats\n4. Display Available Seats\n5. Exit\nEnter Your Choice:" << " ";
+            cin >> choice;
+            break;
+        }
         case 2:
-        //first display the avaiable seats before booking
-        availableSeats(arr[10][10]);
-        cout << "Enter Your Seat Number:" << " ";
-        int seat;
-        cin >> seat;
-        char*message = bookTicket(arr[10][10],seat);
-        cout << *(message) << endl;
-        cout << "1. View Seat Layout \n2. Book Single Seat\n3. Book Multiple Seats\n4. Display Available Seats\n5. Exit\nEnter Your Choice:" << " ";
-        cin >> choice;
-        break;
+        {//first display the avaiable seats before booking
+            availableSeats(arr[10][10]);
+            cout << "Enter Your Seat Number:" << " ";
+            int seat;
+            cin >> seat;
+            char*message = bookTicket(arr[10][10],seat);
+            cout << *(message) << endl;
+            cout << "1. View Seat Layout \n2. Book Single Seat\n3. Book Multiple Seats\n4. Display Available Seats\n5. Exit\nEnter Your Choice:" << " ";
+            cin >> choice;
+            break;
+        }
         case 3:
-        //first display the avaiable seats before booking
-        availableSeats(arr[10][10]);
-        int row_number;
-        cout << "Enter the Row Number to Book:" << " ";
-        cin >> row_number;
-        char*message = bookRow(arr[10][10],row_number);
-        cout << *(message) << endl;
-        cout << "1. View Seat Layout \n2. Book Single Seat\n3. Book Multiple Seats\n4. Display Available Seats\n5. Exit\nEnter Your Choice:" << " ";
-        cin >> choice;
-        break;
+        {//first display the avaiable seats before booking
+            availableSeats(arr[10][10]);
+            int row_number;
+            cout << "Enter the Row Number to Book:" << " ";
+            cin >> row_number;
+            char*message = bookRow(arr[10][10],row_number);
+            cout << *(message) << endl;
+            cout << "1. View Seat Layout \n2. Book Single Seat\n3. Book Multiple Seats\n4. Display Available Seats\n5. Exit\nEnter Your Choice:" << " ";
+            cin >> choice;
+            break;
+        }
         case 4:
         //displaying the available seats
-        displayOptions(arr[10][10]);
-        cout << "1. View Seat Layout \n2. Book Single Seat\n3. Book Multiple Seats\n4. Display Available Seats\n5. Exit\nEnter Your Choice:" << " ";
-        cin >> choice;
-        break;
+        {
+            displayOptions(arr[10][10]);
+            cout << "1. View Seat Layout \n2. Book Single Seat\n3. Book Multiple Seats\n4. Display Available Seats\n5. Exit\nEnter Your Choice:" << " ";
+            cin >> choice;
+            break;
+        }
         case 5:
-        cout << "Thank You for Utilizing the Services" << endl;
-        break;
+        {
+            cout << "Thank You for Utilizing the Services" << endl;
+            break;
+        }
         default:
-        cout << "Enter a Valid Choice" << endl;
-        cout << "1. View Seat Layout \n2. Book Single Seat\n3. Book Multiple Seats\n4. Display Available Seats\n5. Exit\nEnter Your Choice:" << " ";
-        cin >> choice;
-        break;
+        {
+            cout << "Enter a Valid Choice" << endl;
+            cout << "1. View Seat Layout \n2. Book Single Seat\n3. Book Multiple Seats\n4. Display Available Seats\n5. Exit\nEnter Your Choice:" << " ";
+            cin >> choice;
+            break;
+        }
     }
     if(choice == 5){
         break;
     }
    }
    //this is upto the designing
+   return 0;
 }
